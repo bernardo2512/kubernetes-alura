@@ -1,0 +1,8 @@
+apiVersion: v1 # Versão da Api do Kubernetes que desejo usar sendo elas: Alpha, Beta e Stable(v1)
+kind: Pod # Tipo
+metadata:
+  name: primeiro-pod-declarativo # Nome do Pod
+spec: # Especificacoes
+  containers:
+    - name: nginx-container  # o "-" é usado para declarar um novo container se desejado
+      image: nginx:stable

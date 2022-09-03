@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-pod-1
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      #targetPort: 80 sendo feito por baixo dos panos
+      nodePort: 30000
+  selector:
+    app: primeiro-pod
